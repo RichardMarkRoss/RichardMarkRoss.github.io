@@ -1,0 +1,139 @@
+.headTitle{
+width: 50%;
+display: inline-block;
+}
+.headButton{
+  float: right;
+  width: 50%;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.5s;
+    transition: 0.3s;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -500px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button:hover{
+  opacity: 0.8;
+}
+
+  @media only screen and (min-width: 60em) { /* 960px */
+  .container {
+    width: 75%;
+    max-width: 60rem;
+  }
+}
+.col-6-sm {
+  width: 50%;
+  margin: auto;
+  float: left;
+  align-items: center;
+}
+
+  body {
+  font-size: 1em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.7;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0f1d3b; }
+
+}
+.intro{
+      margin: 0 auto;
+      display: inline-flex;
+      padding: 0 20px;
+      box-sizing: border-box;
+      /*color: lightpink;*/
+}
+
+#introPic{
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+.about{
+  margin: auto;
+}
+
+.projectSec:before,.projectSec:after{
+  clear: both;
+  display: table;
+  content: '';
+
+}
+
+
+div.imgBox {
+  width: 30%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  float: left;
+  margin-right: 1.5rem;
+}
+
+div.imgTxt {
+  text-align: center;
+  padding: 10px 20px;
+}
+.imga.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
