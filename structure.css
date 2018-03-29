@@ -94,6 +94,9 @@ display: inline-block;
 
 .about{
   margin: auto;
+  clear: both;
+  display: table;
+  content: '';
 }
 
 .projectSec:before,.projectSec:after{
