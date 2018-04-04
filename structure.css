@@ -144,6 +144,9 @@ div.imgTxt {
     border-radius: 5px;
     text-align: center;
 }
+#image1{
+  height: 180px;
+}
 
 .btn:hover {
     background-color: #4CAF50;
