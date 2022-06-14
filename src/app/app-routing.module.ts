@@ -9,6 +9,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { IntroComponent}from './intro/intro.component'
 
 const routes: Routes = [
+  { path: '', component: IntroComponent},
   { path: 'home', component: AppComponent },
   { path: 'hero', component: HeroComponent },
   { path: 'about', component: AboutComponent },
