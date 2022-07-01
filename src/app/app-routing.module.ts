@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
-import { IntroComponent}from './intro/intro.component'
+import { IntroComponent} from './intro/intro.component';
+import { GameComponent} from './Game/Game.component';
+
 
 const routes: Routes = [
   { path: '', component: IntroComponent},
@@ -14,7 +16,8 @@ const routes: Routes = [
   { path: 'hero', component: HeroComponent },
   { path: 'about', component: AboutComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: 'intro', component: IntroComponent}
+  { path: 'intro', component: IntroComponent},
+  { path: 'game', component: GameComponent}
 ];
 
 @NgModule({
