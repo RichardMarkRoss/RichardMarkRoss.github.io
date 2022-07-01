@@ -8,15 +8,18 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { IntroComponent} from './intro/intro.component';
 import { GameComponent} from './Game/Game.component';
+import { ErrorComponent} from './error/error.component';
 
 
 const routes: Routes = [
   { path: '', component: IntroComponent},
+  { path: 'intro', component: IntroComponent},
   { path: 'home', component: AppComponent },
   { path: 'hero', component: HeroComponent },
   { path: 'about', component: AboutComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: 'game', component: GameComponent}
+  { path: 'game', component: GameComponent},
+  { path: '**', pathMatch:'full', component: ErrorComponent},
 ];
 
 @NgModule({
