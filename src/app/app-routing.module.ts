@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'hero', component: HeroComponent },
   { path: 'about', component: AboutComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: 'intro', component: IntroComponent},
   { path: 'game', component: GameComponent}
 ];
 
