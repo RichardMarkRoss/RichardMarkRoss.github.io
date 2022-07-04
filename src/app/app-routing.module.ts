@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'game', component: GameComponent},
-  { path: '**', pathMatch:'full', component: ErrorComponent},
+  { path: '404', component: ErrorComponent},
+  { path: '**', redirectTo: '/404'},
 ];
 
 @NgModule({

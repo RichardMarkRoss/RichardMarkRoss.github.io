@@ -17,6 +17,10 @@ body {
     animation: movement !important;
 }
 
+.container {
+    margin-left: 0px !important;
+}
+
 
 /* To set the positions for the logo
 for the whole animation */
