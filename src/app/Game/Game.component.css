@@ -17,6 +17,10 @@ body {
     animation: movement !important;
 }
 
+.container {
+    margin-left: 0px !important;
+}
+
 
 /* To set the positions for the logo
 for the whole animation */
@@ -139,7 +143,6 @@ button {
     height: 3em;
     font-size: 20px;
     border: 2px solid white;
-    background: transparent;
     color: white;
     margin: 10px;
     cursor: pointer;

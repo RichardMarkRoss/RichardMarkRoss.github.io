@@ -8,16 +8,21 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { IntroComponent} from './intro/intro.component';
 import { GameComponent} from './Game/Game.component';
+import { ErrorComponent} from './error/error.component';
+import { GeolocationComponent } from './geolocation/geolocation.component';
 
 
 const routes: Routes = [
   { path: '', component: IntroComponent},
+  { path: 'intro', component: IntroComponent},
+  { path: 'geo', component: GeolocationComponent},
   { path: 'home', component: AppComponent },
   { path: 'hero', component: HeroComponent },
   { path: 'about', component: AboutComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: 'intro', component: IntroComponent},
-  { path: 'game', component: GameComponent}
+  { path: 'game', component: GameComponent},
+  { path: '404', component: ErrorComponent},
+  { path: '**', redirectTo: '/404'},
 ];
 
 @NgModule({
