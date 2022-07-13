@@ -9,11 +9,13 @@ import { ResumeComponent } from './resume/resume.component';
 import { IntroComponent} from './intro/intro.component';
 import { GameComponent} from './Game/Game.component';
 import { ErrorComponent} from './error/error.component';
+import { GeolocationComponent } from './geolocation/geolocation.component';
 
 
 const routes: Routes = [
   { path: '', component: IntroComponent},
   { path: 'intro', component: IntroComponent},
+  { path: 'geo', component: GeolocationComponent},
   { path: 'home', component: AppComponent },
   { path: 'hero', component: HeroComponent },
   { path: 'about', component: AboutComponent },

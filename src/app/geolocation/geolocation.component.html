@@ -1,0 +1,52 @@
+<main id="main">
+    <h1 class="">Curreny Exhange</h1>
+    <div class="container">
+        <div class="form">
+            <form>
+                <label for="base_currency">Convert from:</label>
+                <select id="target_currency" (selectionChange)="onChange($event)" form="exchange_form" name="targetCurrency">
+                 <option *ngFor="let rates of ratesArray" [value]="rates.keys">{{rates.keys}}></option>
+                  <!-- (USD, EUR,  GBP, HKD & KES) -->
+              </select>
+                <label for="target_currency">Convert to:</label>
+                <select id="target_currency" form="exchange_form" name="targetCurrency">
+                  <option value="GBP">GBP</option>
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="HKD">HKD</option>
+                  <option value="KES">KES</option>
+      <!-- (USD, EUR,  GBP, HKD & KES) -->
+                </select>
+
+                <!--(ngSubmit)="onSubmit()"-->
+                <label for="amount">Amount to convert:</label>
+                <input type="number" id="amount" name="amount" [value]="amount">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li *ngFor="let posts of ratesArray">
+                <a>
+                    <a>Dates :</a> {{posts.date}}
+                </a>
+                <a>
+                    <a>Rates :</a> {{posts.rates}}
+                </a>
+                <a>
+                    <a>Success :</a> {{posts.success}}
+                </a>
+                <a>
+                    <a>Base :</a> {{posts.Base}}
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+    </div>
+    <!-- <app-line-chart></app-line-chart> -->
+</main>
