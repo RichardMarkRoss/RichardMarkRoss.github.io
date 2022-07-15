@@ -11,18 +11,16 @@ import { GameComponent} from './Game/Game.component';
 import { ErrorComponent} from './error/error.component';
 import { GeolocationComponent } from './geolocation/geolocation.component';
 
-
 const routes: Routes = [
   { path: '', component: IntroComponent},
-  { path: 'intro', component: IntroComponent},
   { path: 'geo', component: GeolocationComponent},
-  { path: 'home', component: AppComponent },
-  { path: 'hero', component: HeroComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'resume', component: ResumeComponent },
+  { path: 'home', component: AppComponent},
+  { path: 'hero', component: HeroComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'resume', component: ResumeComponent},
   { path: 'game', component: GameComponent},
-  { path: '404', component: ErrorComponent},
   { path: '**', redirectTo: '/404'},
+  { path: '404', component: ErrorComponent},
 ];
 
 @NgModule({
@@ -31,4 +29,4 @@ const routes: Routes = [
     RouterModule]
 })
 export class AppRoutingModule { };
-export const routingComponents = [HeroComponent, AboutComponent, ResumeComponent];
+export const routingComponents = [HeroComponent, AboutComponent, ResumeComponent, ErrorComponent];
