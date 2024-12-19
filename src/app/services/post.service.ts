@@ -5,25 +5,14 @@ import { Comments, Rates } from '../classes/comment';
 import { CommonModule } from '@angular/common';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
+export class PostService {
+  private url = 'https://hexarate.paikama.co/api/rates/latest/';
 
-export class PostService{
+  constructor(private http: HttpClient) {}
 
-  private url = 'https://api.exchangerate.host/latest?base=ZAR';
-  private setUrl = 'https://api.exchangerate.host/';
-
-  constructor(private http: HttpClient) { }
-
-  getPosts(): Observable<Comments[]>{
-    return this.http.get<Comments[]>(this.url);
+  getRates(base: string, target: string): Observable<any> {
+    return this.http.get<any>(`${this.url}${base}?target=${target}`);
   }
-  getRates(): Observable<Rates[]>{
-    return this.http.get<Rates[]>(this.url);
-  }
-
-  setRates(value: string): Observable<Rates[]>{
-    return this.http.get<Rates[]>(this.setUrl+'latest?base='+value);
-  }
-
 }
