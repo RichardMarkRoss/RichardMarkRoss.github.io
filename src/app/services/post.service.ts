@@ -1,8 +1,7 @@
-import { Observable } from 'rxjs';
+// /src/app/services/post.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Comments, Rates } from '../classes/comment';
-import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
