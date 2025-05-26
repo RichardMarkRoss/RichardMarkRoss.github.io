@@ -1,15 +1,5 @@
-import { response } from 'express';
 import { Component, OnInit } from '@angular/core';
-import { Injectable } from '@angular/core';
 import { PostService } from '../services/post.service';
-import { FormsModule } from '@angular/forms';
-import { Comments, Rates } from '../classes/comment';
-import {NgForm} from '@angular/forms';
-import { map } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root'
-})
 
 @Component({
   selector: 'app-geolocation',
@@ -17,31 +7,41 @@ import { map } from 'rxjs';
   styleUrls: ['./geolocation.component.css'],
 })
 export class GeolocationComponent implements OnInit {
-  amount: number = 0;
-  current: string = 'USD';
-  convert: string = 'ZAR';
+  amount: number = 1;
+  baseCurrency: string = 'USD';
+  targetCurrency: string = 'ZAR';
   rate: number = 0;
+  result: number | null = null;
+
+  // Predefined currency options
+  currencies = ['USD', 'ZAR', 'EUR', 'GBP', 'HKD', 'KES'];
 
   constructor(private service: PostService) {}
 
-  onChange(event: any) {
-    this.convert = event.target.value;
-    this.fetchRates();
-  }
-
   ngOnInit(): void {
-    this.fetchRates();
+    this.fetchRate();
   }
 
-  fetchRates(): void {
-    this.service.getRates(this.current, this.convert).subscribe(
-      (response) => {
-        this.rate = response?.data?.mid || null;
-      },
-      (error) => {
-        console.error('Error fetching rates:', error);
-      }
-    );
+  fetchRate(): void {
+    if (this.baseCurrency && this.targetCurrency) {
+      this.service.getRates(this.baseCurrency, this.targetCurrency).subscribe(
+        (response) => {
+          this.rate = response?.data?.mid ?? 0;
+          this.calculate();
+        },
+        (error) => {
+          console.error('Error fetching rates:', error);
+          this.rate = 0;
+        }
+      );
+    }
+  }
+
+  calculate(): void {
+    this.result = this.rate * this.amount;
+  }
+
+  onSubmit(): void {
+    this.fetchRate();
   }
 }
-
