@@ -1,47 +1,25 @@
 <main id="main">
-    <h1 class="">Curreny Exhange</h1>
-    <div class="container">
-        <div class="form">
-            <form>
-                <label for="base_currency">Convert from:</label>
-                <select id="target_currency" (selectionChange)="onChange($event)" form="exchange_form" name="targetCurrency">
-                 <option *ngFor="let rates of ratesArray" [value]="rates.keys">{{rates.keys}}></option>
-                  <!-- (USD, EUR,  GBP, HKD & KES) -->
-              </select>
-                <label for="target_currency">Convert to:</label>
-                <select id="target_currency" form="exchange_form" name="targetCurrency">
-                  <option value="GBP">GBP</option>
-                  <option value="EUR">EUR</option>
-                  <option value="USD">USD</option>
-                  <option value="HKD">HKD</option>
-                  <option value="KES">KES</option>
-      <!-- (USD, EUR,  GBP, HKD & KES) -->
-                </select>
+  <h1 class="title">Currency Exchange</h1>
+  <div class="container">
+    <form (ngSubmit)="onSubmit()">
+      <label for="base_currency">Convert from:</label>
+      <select id="base_currency" [(ngModel)]="baseCurrency" name="baseCurrency" (change)="fetchRate()">
+        <option *ngFor="let curr of currencies" [value]="curr">{{curr}}</option>
+      </select>
 
-                <!--(ngSubmit)="onSubmit()"-->
-                <label for="amount">Amount to convert:</label>
-                <input type="number" id="amount" name="amount" [value]="amount">
-                <input type="submit">
-            </form>
-        </div>
-    </div>
+      <label for="target_currency">Convert to:</label>
+      <select id="target_currency" [(ngModel)]="targetCurrency" name="targetCurrency" (change)="fetchRate()">
+        <option *ngFor="let curr of currencies" [value]="curr">{{curr}}</option>
+      </select>
 
-    <div class="container">
-        <ul>
-            <li *ngFor="let posts of ratesArray">
-                <a>
-                    <a>Dates :</a> {{posts.date}}
-                </a>
-                <a>
-                    <a>Rates :</a> {{posts.rates}}
-                </a>
-                <a>
-                    <a>Success :</a> {{posts.success}}
-                </a>
-                <a>
-                    <a>Base :</a> {{posts.Base}}
-                </a>
-            </li>
-        </ul>
-    </div>
+      <label for="amount">Amount to convert:</label>
+      <input type="number" id="amount" name="amount" [(ngModel)]="amount" min="1" (input)="calculate()">
+      
+      <button type="submit">Convert</button>
+    </form>
+  </div>
+  <div class="container results" *ngIf="result !== null">
+    <p>{{amount}} {{baseCurrency}} = {{result | number:'1.2-2'}} {{targetCurrency}}</p>
+    <p>Exchange Rate: 1 {{baseCurrency}} = {{rate}} {{targetCurrency}}</p>
+  </div>
 </main>
