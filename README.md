@@ -25,7 +25,7 @@ This Angular project is divided into modular components, including:
 
 ## 🛠️ Built With
 
-- **Angular** – Frontend framework (vX.X.X)
+- **Angular** – Frontend framework (v^14.0.0)
 - **Bootstrap** – Styling and layout
 - **Typed.js** – Hero text animation
 - **REST APIs** – Live exchange rate integration
