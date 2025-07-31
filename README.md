@@ -37,7 +37,7 @@ This Angular project is divided into modular components, including:
 
 ```bash
 # Clone the repo
-git clone https://github.com/RichardMarkRoss/your-repo-name.git
+git clone https://github.com/RichardMarkRoss/RichardMarkRoss.github.io
 cd your-repo-name
 
 # Install dependencies
@@ -55,7 +55,7 @@ Visit `http://localhost:4200` in your browser.
 
 ```bash
 # Build the project
-ng build --prod --base-href "https://RichardMarkRoss.github.io/your-repo-name/"
+ng build --prod --base-href "https://RichardMarkRoss.github.io"
 
 # Deploy using Angular CLI
 npx angular-cli-ghpages --dir=dist/your-repo-name
@@ -68,14 +68,6 @@ Make sure GitHub Pages is enabled for the `gh-pages` branch in your repo setting
 ## 📄 Resume Download
 
 You can download my latest resume [here](https://drive.google.com/uc?export=download&id=1wQ2BYl3AZJY0_x3n-Vqv93GpcPtdteWU).
-
----
-
-## 📷 Screenshots
-
-| About Section | Resume Section |
-|---------------|----------------|
-| ![about](src/assets/screens/about.png) | ![resume](src/assets/screens/resume.png) |
 
 ---
 
