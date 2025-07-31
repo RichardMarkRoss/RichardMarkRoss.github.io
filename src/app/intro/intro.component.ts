@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+// hero.component.ts
+import { Component, AfterViewInit } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.css']
 })
-export class IntroComponent implements OnInit {
+export class IntroComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    const options = {
+      strings: ["DEVELOPER", "DESIGNER", "PROBLEM SOLVER"],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true
+    };
 
-  constructor() { }
-
-  ngOnInit(): void {
+    new Typed('.typed', options);
   }
-
 }

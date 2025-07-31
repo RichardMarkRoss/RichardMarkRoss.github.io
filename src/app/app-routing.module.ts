@@ -29,4 +29,4 @@ const routes: Routes = [
     RouterModule]
 })
 export class AppRoutingModule { };
-export const routingComponents = [HeroComponent, AboutComponent, ResumeComponent, ErrorComponent];
+export const routingComponents = [HeroComponent, AboutComponent, ResumeComponent, ErrorComponent, GeolocationComponent];

@@ -38,7 +38,7 @@ export class GeolocationComponent implements OnInit {
   }
 
   calculate(): void {
-    this.result = this.rate * this.amount;
+    this.result = this.rate > 0 ? this.rate * this.amount : null;
   }
 
   onSubmit(): void {
