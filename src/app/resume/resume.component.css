@@ -1,0 +1,9 @@
+  .two-column-list {
+    column-count: 2;
+    padding-left: 1rem;
+  }
+
+  .two-column-list li {
+    list-style-type: disc;
+    margin-left: 1rem;
+  }
