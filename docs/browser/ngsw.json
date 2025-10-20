@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1760959849614,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main-5SELE6ZK.js",
+        "/polyfills-BUUDEW7V.js",
+        "/styles-5INURTSO.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/img/Where.gif",
+        "/assets/img/gfg_200x200-min.png",
+        "/assets/img/hero-bg.jpg",
+        "/assets/img/profile-img.jpg",
+        "/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff",
+        "/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2",
+        "/assets/vendor/boxicons/fonts/boxicons.svg",
+        "/assets/vendor/boxicons/fonts/boxicons.ttf",
+        "/assets/vendor/boxicons/fonts/boxicons.woff",
+        "/assets/vendor/boxicons/fonts/boxicons.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/img/Where.gif": "ca38687e73d3b6dd4afd84d507695f0d170dbeab",
+    "/assets/img/gfg_200x200-min.png": "652a4da04757e87be410e5b92bf3413c2a8bd4c6",
+    "/assets/img/hero-bg.jpg": "bb668557eb61307604629d0a1f5334c9c31040c3",
+    "/assets/img/profile-img.jpg": "c2adcd2efc25b3a802e054107cb2844981e27c4f",
+    "/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff": "d9a419a0e36c453d5bca016e11dc3b58fcf4c1c2",
+    "/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2": "e5c03fd4d0715d3a59db5fdba4a19374cf3cc9de",
+    "/assets/vendor/boxicons/fonts/boxicons.svg": "f973c090785170d71cdd9b29824b6db5b3d7bbe0",
+    "/assets/vendor/boxicons/fonts/boxicons.ttf": "f06dd82c7de595ad4f4ee205e55b400cb6386452",
+    "/assets/vendor/boxicons/fonts/boxicons.woff": "669b82d38ce449db1094e6c5c4fbba6a90e0284e",
+    "/assets/vendor/boxicons/fonts/boxicons.woff2": "ff9bdd64fb52fae9229065bab30e97b0daadd974",
+    "/favicon.ico": "a6e95d1702896d0400e5ea0da3459070d1fc960a",
+    "/index.html": "451502ff0cffb15b40d649490b963649e11b50fe",
+    "/main-5SELE6ZK.js": "f578ba66d359d12dbfe94f4c63bbaf1ac7129b44",
+    "/polyfills-BUUDEW7V.js": "f7958e7443daaa2a26783243d65aaee7fc6c5ec0",
+    "/styles-5INURTSO.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
