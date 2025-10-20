@@ -1,28 +1,38 @@
 <!-- ======= Header ======= -->
 <header id="header">
-    <div class="d-flex flex-column">
+  <div class="d-flex flex-column">
 
-        <div class="profile">
-            <img src="../assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-            <h1 class="text-light"><a>Richard Ross</a></h1>
-            <div class="social-links mt-3 text-center">
-                <a href="https://www.linkedin.com/in/richard-ross-71a4b3217/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/RichardMarkRoss" target="_blank" class="linkedin"><i class="bx bxl-github"></i></a>
-            </div>
-        </div>
-
-        <nav id="navbar" class="nav-menu navbar">
-        <ul>
-            <li><a routerLink="/" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
-            <li><a routerLink="/about" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-            <li><a routerLink="/resume" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-            <li><a routerLink="/geo" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-compass"></i> <span>Currency Exchange</span></a></li>
-            <li><a href="https://drive.google.com/uc?export=download&id=1wQ2BYl3AZJY0_x3n-Vqv93GpcPtdteWU" target="_blank" class="nav-link scrollto">
-            <i class="bx bxl-google-cloud"></i> <span>Download Resume</span></a>
-            </li>
-        </ul>
-        </nav>
-
+    <div class="profile">
+      <img src="../assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle" />
+      <h1 class="text-light"><a>Richard Ross</a></h1>
+      <div class="social-links mt-3 text-center">
+        <a href="https://www.linkedin.com/in/richard-ross-71a4b3217/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/RichardMarkRoss" target="_blank" class="linkedin"><i class="bx bxl-github"></i></a>
+      </div>
     </div>
+
+    <nav id="navbar" class="nav-menu navbar">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a routerLink="/about" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a routerLink="/resume" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a routerLink="/geo" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-compass"></i> <span>Currency Exchange</span></a></li>
+        <li>
+          <a href="https://drive.google.com/uc?export=download&id=1wQ2BYl3AZJY0_x3n-Vqv93GpcPtdteWU"
+             target="_blank" class="nav-link scrollto">
+            <i class="bx bxl-google-cloud"></i> <span>Download Resume</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ✅ Moved and styled version info -->
+    <div class="version-info mt-auto text-center text-muted small">
+      <div>Angular: {{ angularVersion }}</div>
+      <div>App: {{ appVersion }}</div>
+    </div>
+
+  </div>
 </header>
+
 <router-outlet></router-outlet>

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1760959849614,
+  "timestamp": 1760962066642,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-5SELE6ZK.js",
+        "/main-DY4YWOW4.js",
         "/polyfills-BUUDEW7V.js",
         "/styles-5INURTSO.css"
       ],
@@ -54,8 +54,8 @@
     "/assets/vendor/boxicons/fonts/boxicons.woff": "669b82d38ce449db1094e6c5c4fbba6a90e0284e",
     "/assets/vendor/boxicons/fonts/boxicons.woff2": "ff9bdd64fb52fae9229065bab30e97b0daadd974",
     "/favicon.ico": "a6e95d1702896d0400e5ea0da3459070d1fc960a",
-    "/index.html": "451502ff0cffb15b40d649490b963649e11b50fe",
-    "/main-5SELE6ZK.js": "f578ba66d359d12dbfe94f4c63bbaf1ac7129b44",
+    "/index.html": "8b6aa23f32f6ba2c27083b1124acce4640c3fa06",
+    "/main-DY4YWOW4.js": "39ce2ccca418f23c9a73862f9256dcb8a7e4ba5d",
     "/polyfills-BUUDEW7V.js": "f7958e7443daaa2a26783243d65aaee7fc6c5ec0",
     "/styles-5INURTSO.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
