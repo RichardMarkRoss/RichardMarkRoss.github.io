@@ -3,9 +3,10 @@ import { Component, AfterViewInit } from '@angular/core';
 import Typed from 'typed.js';
 
 @Component({
-  selector: 'app-intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.css']
+    selector: 'app-intro',
+    templateUrl: './intro.component.html',
+    styleUrls: ['./intro.component.css'],
+    standalone: false
 })
 export class IntroComponent implements AfterViewInit {
   ngAfterViewInit(): void {

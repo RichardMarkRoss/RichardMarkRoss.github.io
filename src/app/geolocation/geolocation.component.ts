@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
 
 @Component({
-  selector: 'app-geolocation',
-  templateUrl: './geolocation.component.html',
-  styleUrls: ['./geolocation.component.css'],
+    selector: 'app-geolocation',
+    templateUrl: './geolocation.component.html',
+    styleUrls: ['./geolocation.component.css'],
+    standalone: false
 })
 export class GeolocationComponent implements OnInit {
   amount: number = 1;

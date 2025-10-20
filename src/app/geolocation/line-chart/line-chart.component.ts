@@ -4,9 +4,10 @@ import { ChartDataset, ChartOptions } from 'chart.js';
 
 
 @Component({
-  selector: 'app-line-chart',
-  templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.css']
+    selector: 'app-line-chart',
+    templateUrl: './line-chart.component.html',
+    styleUrls: ['./line-chart.component.css'],
+    standalone: false
 })
 export class LineChartComponent{
 
