@@ -18,4 +18,6 @@ GitHub Pages serves `/docs` on the `gh-pages` branch. Run `npm run build`, then 
 - All content lives in `index.html`, so the page reads fine without JS. `src/main.ts` only adds the cursor spotlight, scroll reveals and active nav state.
 - The 3D hero (`src/hero3d.ts`) is skipped when `prefers-reduced-motion` is on or the device has less than 4 GB of memory. A CSS gradient shows instead.
 - `public/ngsw-worker.js` unregisters the service worker left behind by the old Angular site, so returning visitors don't get stuck on the cached old version.
+- The CV PDF (`public/Richard-Ross-CV.pdf`) is generated from `cv/cv.html`. Edit the HTML, then re-export it with headless Chrome:
+  `chrome --headless=new --no-pdf-header-footer --print-to-pdf="<abs path>\public\Richard-Ross-CV.pdf" file:///<abs path>/cv/cv.html`
 - To refresh the project screenshots in `public/projects/`, capture each live site at 1440×900 and convert to 960px-wide WebP.
