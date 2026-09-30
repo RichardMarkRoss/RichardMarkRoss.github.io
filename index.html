@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Richard Ross · Full-Stack Developer</title>
+  <meta name="description" content="Richard Ross, full-stack developer in Johannesburg. I ship mobile apps, real-time Rust tooling and Firebase backends: Lotto Dash, Aimllama and Heroes Without Sound." />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="Richard Ross · Full-Stack Developer" />
+  <meta property="og:description" content="Mobile apps, real-time Rust tooling and Firebase backends, shipped and live." />
+  <meta property="og:image" content="https://richardmarkross.github.io/projects/aimllama.webp" />
+  <meta property="og:url" content="https://richardmarkross.github.io/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <div class="layout">
+    <header class="side">
+      <canvas id="hero3d" aria-hidden="true"></canvas>
+      <div class="side-inner">
+        <img class="avatar" src="/profile.webp" width="72" height="72" alt="Richard Ross" />
+        <h1>Richard Ross</h1>
+        <p class="role">Full-Stack Developer</p>
+        <p class="pitch">I build products end to end, from the Rust hot path and the Flutter UI to the Cloud Function that settles the payment.</p>
+
+        <nav class="nav" aria-label="Sections">
+          <a href="#about"><span class="line"></span>About</a>
+          <a href="#projects"><span class="line"></span>Projects</a>
+          <a href="#experience"><span class="line"></span>Experience</a>
+          <a href="#contact"><span class="line"></span>Contact</a>
+        </nav>
+
+        <ul class="socials">
+          <li><a href="https://github.com/RichardMarkRoss" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/richard-ross-71a4b3217/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:richross707@gmail.com">Email</a></li>
+          <li><a href="https://drive.google.com/uc?export=download&amp;id=1wQ2BYl3AZJY0_x3n-Vqv93GpcPtdteWU" target="_blank" rel="noreferrer">Résumé</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="about" aria-label="About">
+        <h2 class="label">About</h2>
+        <p>I didn't take the straight road into software. I sold houses at <strong>Jawitz Property</strong> and then spent two years laying and testing fibre in Cape Town before I earned my IT certificate and Java OCA at <strong>Project CodeX</strong>. Since then I've shipped production work at Accenture, AddPay, SAC Trucks, WorldSportsBetting and now Smartz Solutions.</p>
+        <p>Outside the day job I build and ship my own products. Three of them are live: a lottery ticket scanner on Google Play, a Rust input engine that lets you play mobile shooters with a keyboard and mouse, and an accessibility overlay that helps deaf gamers <em>see</em> sound.</p>
+        <p>I like problems with real users on the other end, and I write down <em>why</em> a decision was made, not just what the code does.</p>
+      </section>
+
+      <section id="projects" aria-label="Featured projects">
+        <h2 class="label">Featured Projects</h2>
+
+        <article class="card project reveal">
+          <a class="shot" href="https://aimllama.com" target="_blank" rel="noreferrer" tabindex="-1">
+            <img src="/projects/aimllama.webp" width="960" height="600" loading="lazy" alt="Aimllama website: play mobile games with a keyboard and mouse" />
+          </a>
+          <div>
+            <h3><a href="https://aimllama.com" target="_blank" rel="noreferrer">Aimllama <span class="arrow">↗</span></a></h3>
+            <p>Keyboard and mouse for mobile shooters, <strong>without an emulator</strong>. The real game runs on your real phone. Aimllama mirrors it to your PC, or maps input on the device itself, and turns your keys into touches.</p>
+            <ul class="hard">
+              <li><b>Real-time core in Rust.</b> It streams the phone over ADB (scrcpy), upscales on the GPU and injects multi-pointer touch events over the control socket. I chose Rust so there are no GC pauses in the input path.</li>
+              <li><b>Vision engine.</b> On-screen buttons jitter, so it re-finds them before each tap. Each search covers a tiny region instead of the whole frame, which keeps it cheap at 60–120 fps.</li>
+              <li><b>One product across three codebases.</b> A Kotlin/Compose Android app shares the Rust core through the NDK. Play purchases are validated server-side in Firebase, and a QR handshake links a purchase to the desktop.</li>
+            </ul>
+            <p class="meta">~16k lines of Rust · ~12k lines of Kotlin · Windows installer and in-app updates</p>
+            <ul class="chips"><li>Rust</li><li>Kotlin</li><li>Jetpack Compose</li><li>Android NDK</li><li>Firebase</li><li>Play Billing</li></ul>
+          </div>
+        </article>
+
+        <article class="card project reveal">
+          <a class="shot" href="https://lottodash.web.app" target="_blank" rel="noreferrer" tabindex="-1">
+            <img src="/projects/lottodash.webp" width="960" height="600" loading="lazy" alt="Lotto Dash website: latest results, scan your ticket free" />
+          </a>
+          <div>
+            <h3><a href="https://lottodash.web.app" target="_blank" rel="noreferrer">Lotto Dash <span class="arrow">↗</span></a></h3>
+            <p>A South African lottery app on Google Play. Point your camera at a paper ticket and it checks every board against the latest draw in about five seconds. It covers all 7 games and sends push alerts when results land.</p>
+            <ul class="hard">
+              <li><b>OCR ticket parser.</b> ML Kit returns loose lines of text. I use the Y-coordinates of the dashed separator rows to split each ticket into header, numbers and footer, then detect the game and validate the receipt before trusting a single number.</li>
+              <li><b>Offline-first.</b> Ticket changes apply optimistically on the device and queue while offline. The queue drains on the next app resume, so no scan is ever lost to a bad signal.</li>
+              <li><b>Backend of about 25 Cloud Function modules.</b> Nightly result polling for each game, server-verified Play subscriptions, referrals and FCM. I moved it onto the new national lottery operator for 1 June 2026 and carried every user's saved tickets over.</li>
+            </ul>
+            <p class="meta">140+ commits across the app and backend · subscriptions, ads and referrals</p>
+            <ul class="chips"><li>Flutter</li><li>Dart</li><li>ML Kit</li><li>Firebase</li><li>Cloud Functions (TS)</li><li>Firestore</li></ul>
+          </div>
+        </article>
+
+        <article class="card project reveal">
+          <a class="shot" href="https://heroes-without-sound.vercel.app" target="_blank" rel="noreferrer" tabindex="-1">
+            <img src="/projects/hws.webp" width="960" height="600" loading="lazy" alt="Heroes Without Sound website: help deaf gamers see sound" />
+          </a>
+          <div>
+            <h3><a href="https://heroes-without-sound.vercel.app" target="_blank" rel="noreferrer">Heroes Without Sound <span class="arrow">↗</span></a></h3>
+            <p>In competitive shooters, footsteps and gunfire carry information. Deaf and hard-of-hearing players don't get it. Heroes Without Sound is a Windows overlay that turns game audio into a 3D sphere-and-ring display showing where a sound came from, how far away it was and how loud.</p>
+            <ul class="hard">
+              <li><b>Designed for a glance.</b> Direction, distance and intensity have to read in a split second mid-fight, without covering the crosshair.</li>
+              <li><b>Launch site</b> built in Next.js 16 with a React Three Fiber particle sphere that previews the overlay. I kept it on patched releases through the React Server Components CVE.</li>
+            </ul>
+            <p class="meta">v0.1.0 Windows installer available · tested in Rainbow Six Siege</p>
+            <ul class="chips"><li>Next.js</li><li>React Three Fiber</li><li>Three.js</li><li>Tailwind</li><li>Vercel</li></ul>
+          </div>
+        </article>
+
+        <p class="note">The source repos are private. I'm happy to walk through the code on a call.</p>
+      </section>
+
+      <section id="experience" aria-label="Experience">
+        <h2 class="label">Experience</h2>
+        <ol class="timeline">
+          <li class="card reveal"><span class="when">Dec 2023 — Now</span><div><h3>Full-Stack Developer · Smartz Solutions</h3><p>Full-stack apps in Laravel, React and Vue.js. Scalable Go APIs and tuned MySQL queries, shipped in agile iterations.</p><ul class="chips"><li>Laravel</li><li>React</li><li>Vue</li><li>Go</li><li>MySQL</li></ul></div></li>
+          <li class="card reveal"><span class="when">Aug 2022 — Nov 2023</span><div><h3>Full-Stack Developer · WorldSportsBetting</h3><p>Web and mobile apps in React, Dart, Swift and Node.js, plus Angular front-ends over REST APIs. Tested and optimised for peak load.</p><ul class="chips"><li>React</li><li>Dart</li><li>Swift</li><li>Node.js</li><li>Angular</li></ul></div></li>
+          <li class="card reveal"><span class="when">Mar — Jul 2022</span><div><h3>Full-Stack Developer · SAC Trucks</h3><p>Maintained PHP web apps and MySQL backends, built mobile features in Flutter and fixed backend performance issues.</p><ul class="chips"><li>PHP</li><li>MySQL</li><li>Flutter</li></ul></div></li>
+          <li class="card reveal"><span class="when">Dec 2021 — Feb 2022</span><div><h3>Full-Stack Developer · AddPay</h3><p>Angular front-ends and WordPress plugins for cloud payment flows and POS integrations.</p><ul class="chips"><li>Angular</li><li>WordPress</li><li>Payments</li></ul></div></li>
+          <li class="card reveal"><span class="when">2020 — 2021</span><div><h3>Business Integration Analyst · Accenture</h3><p>ABAP CDS data models for SAP S/4HANA, and Oracle Cloud workflows automated in Python and Java.</p><ul class="chips"><li>SAP S/4HANA</li><li>ABAP</li><li>Python</li><li>Java</li></ul></div></li>
+          <li class="card reveal"><span class="when">2018 — 2019</span><div><h3>National Certificate in IT · Project CodeX</h3><p>Software and systems development, Cape Town. Java OCA SE 8 certified in 2019.</p></div></li>
+        </ol>
+        <a class="cta" href="https://drive.google.com/uc?export=download&amp;id=1wQ2BYl3AZJY0_x3n-Vqv93GpcPtdteWU" target="_blank" rel="noreferrer">Download the full résumé <span class="arrow">↗</span></a>
+      </section>
+
+      <section id="contact" aria-label="Contact">
+        <h2 class="label">Contact</h2>
+        <p class="big">Have a product that needs building, or a role where this kind of work fits? <a href="mailto:richross707@gmail.com">richross707@gmail.com</a></p>
+        <p class="foot">Built with Vite, TypeScript and Three.js. No framework, one dependency. Johannesburg, South Africa.</p>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
